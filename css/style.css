@@ -1,0 +1,1370 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* 
+===========================================================================================
+================================== Start Css Styling =============================================
+============================================================================================
+ */
+
+/* ==================== Start General  styling====================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+   font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400;
+    line-height: 27px !important;
+}
+h1,h2,h3,h4{
+   font-weight: 700 !important;
+}
+
+/* ==================== END General  styling====================*/
+
+/* ====================Start Common  styling====================*/
+
+a,a:hover{
+    text-decoration: none !important;
+}
+ul{
+    list-style: none;
+}
+input:focus,
+textarea:focus{
+   outline: 0;
+}
+
+.sectionPadding{
+   padding-top: 80px;
+}
+.primary{
+   overflow: hidden;
+}
+a.primaryBtn {
+   background: #fff;
+   color: black;
+   font-weight: 600;
+   padding: 8px 15px;
+   position: relative;
+   display: inline-block;
+   z-index: 1;
+}
+
+a.primaryBtn:before {
+   content: '';
+   position: absolute;
+   background: #ffc925;
+   top: 0;left: -100%;
+   width: 100%;
+   height: 100%;
+   transition: all .5s ease;
+   z-index: -1;
+}
+a.primaryBtn:hover:before {
+   height: 100%;
+   left: 0;
+}
+a.linkButton {
+   color: #ffc925;
+   font-weight: 600;
+   transition: .4s;
+}
+
+a.linkButton:hover {
+   color: #333;
+   margin-left: 7px;
+}
+.sectionHead {
+   text-align: center;
+}
+
+.sectionHead h2 {
+   position: relative;
+   display: inline-block;
+   margin-bottom: 40px;
+}
+
+.sectionHead h2:before {
+   content: '';
+   position: absolute;
+   height: 3px;width: 50px;
+   background: #ffc925;
+   bottom: -10px;left: 50%;
+   transform: translateX(-50%);
+}
+
+
+  
+/* ==================== END Common   styling====================*/
+
+
+/* ====================Start Menu Area styling====================*/
+ 
+#navbar{
+   background: rgba(0,0,0,.7);
+   position: fixed;
+   z-index: 999;
+   width: 100%;
+   top: 0;
+   padding: 10px 0;
+}
+.navbar span{
+   color: #ffc925;
+}
+.navbar-brand{
+   font-size: 30px !important;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+.navbar-nav li a{
+   color: #fff !important;
+   padding-left: 5px;
+   padding-right: 5px;
+   transition: .4s;
+}
+.dropdown-menu {
+   background: #333;
+}
+.dropdown-menu a:hover{
+   background: none;
+}
+.navbar-nav li a.active,
+.navbar-nav li a:hover{
+   color: #ffc925 !important;
+}
+input#searchInput {
+   height: 35px;
+   border-radius: 20px;
+   border: none;
+   padding: 0 15px;
+   visibility: hidden;
+   position: absolute;
+   top: 14px;
+   right: 47px;
+   opacity: 0;
+   transition: all .4s ease-in;
+}
+#searchInput.active{
+   visibility: visible;
+   top: 64px;
+   opacity: 1;
+}
+
+/* ==================== End Menu Area styling====================*/
+
+
+/* ====================Start Hero Area  styling====================*/
+.slider-item{
+  position: relative;
+  width: 100%;
+}
+.slider-item::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;bottom: 0;right: 0;
+   background: rgba(0,0,0,.5);
+}
+
+.bannerTextArea {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.bannerTextArea:before {
+  content: '';
+  position: absolute;
+  top: 0;left: 28px;
+  border: 5px solid #ffc925;
+  background: rgba(14, 14, 14, 0.3);
+  height: 70%;width: 300px;
+  margin-top: 100px;
+  animation: border;
+  animation-duration: 3s;
+  /* animation-timing-function: ease-in-out; */
+  animation-iteration-count: infinite;
+  /* z-index: 101; */
+}
+@keyframes border{
+   0%{
+      transform: translate(0px,0px);
+   }
+25%{
+   transform: translate(-15px,0px);
+}
+50%{
+   transform: translate(-15px,-15px);
+}
+75%{
+   transform: translate(0px,-15px);
+}
+100%{
+   transform: translate(0px,0px);
+}
+}
+.bannerText {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 850px;
+  padding-left: 50px;
+}
+.bannerText h1 {
+  text-transform: uppercase;
+  font-size: 60px;
+  position: relative;
+}
+.bannerText p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+ul.slick-dots {
+  display: none !important;
+}
+.slick-prev:before{
+   content: "\f30a" !important;
+   font-weight: 900;
+   font-family: "Font Awesome 5 Free" !important;
+   font-size: 24px !important;
+  }
+  .slick-next:before{
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900;
+   content: "\f30b" !important;
+   font-size: 24px !important;
+  }
+#banner .slick-next{
+  right: 50px !important;
+  z-index: 999;
+}
+#banner .slick-prev{
+  left: 50px !important;
+  z-index: 999;
+
+}
+
+/* ==================== End Hero Area  styling====================*/
+
+/* ==================== Start Service area  styling====================*/
+#service .slick-next {
+   right: -40px !important;
+   background: #ffc925;
+   border-radius: 50%;
+   height: 35px;
+   width: 35px;
+   text-align: center;
+}
+ #service .slick-prev{
+   left: -40px !important;
+   background: #ffc925;
+   border-radius: 50%;
+   height: 35px;
+   width: 35px;
+ text-align: center;
+ }
+.card {
+   padding: 0 10px;
+   border: none;
+   margin-bottom: 30px;
+}
+.card-body{
+   /* box-shadow: 0px 10px 12px rgba(0,0,0,.5); */
+   box-shadow: 0px 2px 8px 7px rgba(138,138,138,0.67);
+}
+/* ==================== End Service Area  styling====================*/
+
+/* ==================== Start Inspiration area  styling====================*/
+.inspirationArea{
+   display: flex;
+   overflow: hidden;
+}
+.inspirationItem{
+   height: 80vh;
+   background-size: cover;
+   background-position: center center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
+   position: relative;
+   text-align: center;
+   transition: all 1s ease-in-out;
+}
+.inspirationItem::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,.5);
+}
+.inspirationItem h5 {
+   color: #fff;
+   z-index: 6;
+}
+.inspirationItem.insItem7 i {
+   font-size: 30px;
+   color: #fff;
+}
+h3.inshead {
+   z-index: 6;
+}
+.open{
+   flex: 4;
+}
+.insItem1{
+   background-image: url(../images/beige-and-black-chair-in-front-of-white-desk-509922.jpg);
+}
+.insItem2{
+   background-image: url(../images/brown-wooden-sofa-set-with-lighted-table-lamp-189333.jpg);
+}
+.insItem3{
+   background-image: url(../images/green-leafed-plants-on-kitchen-island-1358900.jpg);
+}
+.insItem4{
+   background-image: url(../images/grey-fabric-sectional-sofa-on-brown-wooden-floor-1743226.jpg);
+}
+.insItem5{
+   background-image: url(../images/kitchen-and-dining-area-1080721.jpg);
+}
+.insItem6{
+   background-image: url(../images/photo-of-bedroom-1454806.jpg);
+}
+.insItem7{
+   background: #ffc925;
+}
+/* ==================== End Inspiration Area  styling====================*/
+
+/* ==================== Start New Furnitures area  styling====================*/
+.overlay {
+   position: absolute;
+   top: 10%;
+   left: -50px;
+   display: flex;
+   padding: 0px;
+   flex-direction: column;
+   transition: all .5s ease-in-out;
+}
+
+.newItem:hover .overlay {
+   left: 20px;
+}
+
+.newItem {
+   margin-bottom: 30px;
+   position: relative;
+   overflow: hidden;
+}
+
+.overlay button {
+   margin-bottom: 5px;
+   transition: all .4s ease-in-out;
+}
+
+.overlay button:hover {
+   background: red;
+}
+
+.newItemText {
+   text-align: center;
+}
+
+.newItemText .rating {
+   color: #ffc925;
+   font-size: 12px;
+}
+
+.newItemText h4 {
+   font-size: 20px;
+}
+
+.newItemText h5 {
+   font-size: 18px;
+   font-weight: 600;
+   color: #ffc925;
+}
+/* ==================== End New Furnitures  styling====================*/
+
+/* ==================== Start ownDesign area  styling====================*/
+.ownDesignImg img {
+   height: 350px;
+   width: 100%;
+}
+
+.ownDesignText {
+   padding: 30px 10px;
+   margin-top: 35px;
+}
+.ownDesignText p.primary .primaryBtn {
+   background: #333 !important;
+   color: #fff;
+}
+/* ==================== End ownDesign Area  styling====================*/
+
+/* ==================== Start FeatureProduct area  styling====================*/
+.featureItem {
+   position: relative;
+   overflow: hidden;
+   margin-bottom: 30px;
+}
+.featureItem:before {
+   content: '';
+   position: absolute;
+   top: 100%;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(0,0,0,.5);
+   transition: all .4s ease-in-out;
+}
+.featureItem:hover:before{
+   top: 0;
+}
+.featureIcon {
+   position: absolute;
+   top: 10px;
+   right: -40px;
+   display: flex;
+   flex-direction: column;
+   transition: all .4s ease-in-out;
+}
+.featureIcon button {
+   margin-bottom: 2px;
+   padding: 4px 7px;
+   transition: all .4s ease-in-out;
+}
+.featureIcon i {
+   text-align: center;
+}
+
+.featureIcon button:hover {
+   background: red;
+}
+
+.featureItem:hover .featureIcon {
+   right: 15px;
+}
+
+.featureItemText {
+   position: absolute;
+   top: 10px;
+   left: -100%;
+   transition: all .5s ease-in-out;
+}
+
+.featureItemText .rating {
+   font-size: 11px;
+   color: red;
+}
+
+.featureItemText h5 {
+   font-size: 20px;
+   font-weight: 600;
+   color: #fff;
+}
+
+.featureItemText h4 {
+   font-size: 20px;
+   margin-bottom: 2px;
+   color: #fff;
+}
+
+.featureItem:hover .featureItemText {
+   left: 10px;
+}
+
+/* ==================== End FeatureProduct Area  styling====================*/
+
+/* ==================== Start Review area  styling====================*/
+
+.reviewImg {
+   width: 100px;
+   height: 100px;
+   display: block;
+   overflow: hidden;
+   border-radius: 50%;
+   margin: 0 auto;
+}
+.reviewImg img{
+   width: 100%;
+}
+#review {
+   background: #313a45;
+   padding: 80px 0;
+   margin-top: 80px;
+}
+
+.reviewItem {
+   background: #fff;
+   margin: 0px 5px;
+   padding: 20px;
+   text-align: center;
+   border-radius: 100px 0 100px 0;
+}
+.reviewContent h4 {
+   font-size: 15px;
+   margin-top: 10px;
+}
+
+.reviewContent h3 {
+   text-transform: uppercase;
+   font-size: 22px;
+   color: #ffc925;
+   padding-top: 15px;
+}
+
+.reviewContent p i {
+   color: #f7be13;
+   font-size: 12px;
+}
+
+.reviewContent p.clientText {
+   border-top: 1px solid #f5c021;
+   padding-top: 7px;
+}
+/* ==================== End Review Area  styling====================*/
+
+/* ==================== Start Blog Area  styling====================*/
+.blogItem{
+   margin-bottom: 30px;
+}
+.blog-im {
+   position: relative;
+   overflow: hidden;
+}
+.blog-im img {
+   height: 100%;
+   width: 100%;
+   transition: .5s;
+}
+.blog-im:hover img {
+   transform: scale(1.3);
+}
+.blog-im:after{
+   content: '';
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   background: rgba(0,0,0,0.2);
+}
+.card-content {
+   padding: 20px;
+   background: #fff;
+   box-shadow: 0px 10px 9px rgba(0,0,0,.5);
+   position: relative;
+}
+.card-content h5 {
+   font-weight: 600;
+}
+p.author {
+   font-size: 13px;
+   margin-bottom: 5px;
+}
+.card-content a {
+   color: #333;
+   font-weight: 600;
+   transition: .4s;
+}
+
+.card-content a:hover {
+   color: #fcc725;
+   margin-left: 5px;
+}
+/* ==================== End Blog Area  styling====================*/
+
+/* ==================== Start Footer Area  styling====================*/
+#footer{
+   padding-top: 100px;
+   margin-top: 50px;
+   background: #313a45;
+   color: #fff !important;
+}
+.footer-widget h3{
+   margin-bottom: 20px;
+   font-size: 24px;
+   color: #fff !important;
+}
+.footer-tittle a{
+   font-size: 24px;
+   color: #fff;
+}
+.footer-tittle a span{
+   color: #ffc925;
+}
+.footer-widget ul.social-icon{
+   list-style: none;
+}
+.footer-widget ul.social-icon li{
+   display: inline-block;
+}
+.footer-widget ul.social-icon li a{
+   text-decoration: none;
+   color: #fff;
+   margin-left: 5px;
+   margin-right: 5px;
+   font-size: 18px;
+   transition: .4s;
+}
+.footer-widget ul.social-icon li:hover a{
+   color: #ffc925;
+}
+.news ul{
+   list-style: none;
+}
+.news ul li a{
+   color: #fff;
+   font-size: 14px;
+   transition: .4s;
+}
+.news ul li a:hover{
+   text-decoration: none;
+   color: #ffc925;
+}
+.links ul{
+   list-style: none;
+}
+.links ul li a{
+   color: #fff;
+   text-decoration: none;
+   font-size: 16px;
+   transition: .4s;
+}
+.links ul li a:hover {
+   color: #ffc925;
+}
+.location p{
+   margin-bottom: 7px !important;
+}
+.instagramPhoto img {
+   width: 30%;
+   margin: 2px;
+}
+
+.footer-bottom:before{
+   content: '';
+   position: absolute;
+   top: -20px;
+   width: 100%;
+   height: 1px;
+   background: rgba(255, 255, 255, 0.192);
+}
+.footer-bottom{
+   margin-top: 50px;
+   position: relative;
+}
+.footer-bottom p {
+   text-align: center;
+   margin-bottom: 0;
+   padding-bottom: 15px;
+}
+.footer-bottom a{
+   color: #fcc725;
+}
+
+
+/* ====================End Footer Area  styling====================*/
+
+/* ==================== Start Service page styling====================*/
+div#page-banner {
+   position: relative;
+   height: 320px;
+   width: 100%;
+}
+.serviceHeadImg{
+   background: url('../images/interior-design-of-a-house-1571460.jpg');
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+}
+div#page-banner:before {
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(136, 98, 98, 0.5);
+}
+.page-cont {
+   position: absolute;
+   top: 60%;
+   text-align: center;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.page-cont h2 {
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 40px;
+}
+.page-cont p {
+   color: #fff;
+   font-size: 20px;
+}
+.page-cont p span {
+   color: #ffc925;
+   margin: 0px 5px; 
+}
+/* ==================== End Service page styling====================*/
+
+/* ==================== Start About Page  styling====================*/
+.aboutHeadImg{
+   background: url('../images/two-chairs-with-glass-table-on-living-room-near-window-1571453.jpg');
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+}
+.about-img {
+   position: relative;
+}
+.about-img img {
+   width: 100%;
+}
+.about-text h4 {
+   text-transform: uppercase;
+   font-size: 20px;
+}
+.about-text h2 {
+   color: #ffc925;
+}
+.about-text p span {
+   color: #ffc925;
+   font-weight: 600;
+}
+.about-img:before {
+   content: '';
+   position: absolute;
+   width: 90%;
+   border: 20px solid #ffc925;
+   height: 90%;
+   top: -20px;left: -20px;
+   z-index: -1;
+}
+.about-img:after {
+   content: '';
+   position: absolute;
+   border: 5px solid #ffc82583;
+   z-index: 1;
+   left: 5%;top: 5%;
+   height: 90%;width: 90%;
+}
+.slick-slide img {
+   margin: 0 auto;
+}
+/*  */
+section#counter {
+   background-image: url(../images/brown-wooden-sofa-set-with-lighted-table-lamp-189333.jpg);
+   padding: 120px 0px;
+   margin-top: 60px;
+   text-align: center;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+}
+section#counter:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,.5);
+}
+.counterItem h1 {
+   color: #ffc925;
+}
+.counterItem h4 {
+   font-size: 18px;
+   color: #fff;
+}
+/*  */
+/* ==================== End About Page  styling====================*/
+
+/* ==================== Start Shop Page  styling====================*/
+.shopHeadImg{
+   background: url('../images/banner2-1350789.jpg');
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+}
+/* ==================== End Shop Page  styling====================*/
+
+/* ==================== Start Shop-Details Page  styling====================*/
+
+.shopDetailsHeadImg{
+   background: url('../images/grey-fabric-sectional-sofa-on-brown-wooden-floor-1743226.jpg');
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+}
+.productImg img{
+   width: 100%;
+}
+.slider-nav img{
+ padding: 0 5px;
+ margin-top: 10px;
+}
+.addToCart .form-group {
+   margin-bottom: 1rem;
+   display: inline-block;
+}
+h2.productName {
+   font-size: 24px;
+}
+.productReview i {
+   color: #ffc925;
+   font-size: 13px;
+}
+h2.productPrice {
+   color: #ffc925;
+   padding: 7px 0 10px 0;
+}
+p.productAbout {
+   margin-bottom: 30px;
+}
+.addToCart {
+   border-bottom: 1px solid #888;
+   border-top: 1px solid #888;
+   padding: 20px 0;
+}
+.addReview .form-group select {
+   width: 50px;
+   height: 34px;
+   margin-right: 10px;
+}
+.addToCart button {
+   margin-right: 10px;
+}
+ul.productTag li {
+   display: inline-block;
+   margin-right: 15px;
+}
+ul.productTag {
+   margin-top: 20px;
+}
+ul.shareProduct li {
+   display: inline-block;
+}
+ul.shareProduct li a {
+   margin-left: 10px;
+   background: gray;
+   width: 30px;
+   display: inline-block;
+   height: 30px;
+   text-align: center;
+   line-height: 30px;
+   color: #fff;
+   transition: all .5s ease-in-out;
+}
+ul.shareProduct li a:hover {
+   border-radius: 50%;
+   background: #ffc925;
+}
+div#home{
+   padding: 20px 20px;
+   border: 1px solid #333;
+}
+div#profile {
+   position: relative;
+   padding: 20px 20px;
+   border: 1px solid #333;
+}
+div#profile h3 {
+   font-size: 24px;
+}
+.productReview img {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   float: left;
+}
+.reviewText {
+   margin-left: 100px;
+   padding-top: 15px;
+}
+.reviewText h5 {
+   font-size: 16px;
+}
+.reviewText p {
+   font-size: 14px;
+}
+.reviewRating {
+   position: absolute;
+   right: 0;
+   top: 46px;
+}
+.addReview {
+   margin-top: 40px;
+}
+.addReviewRating {
+   margin-top: -22px;
+   font-size: 12px;
+   margin-bottom: 15px;
+}
+.relatedProduct h3{
+   margin: 50px 0 20px 0;
+}
+
+/* ==================== End Shop-Details Page  styling====================*/
+
+/* ==================== Start Cart Page  styling====================*/
+
+.cartHeadImg{
+   background: url('../images/rectangular-white-island-table-in-kitchen-2398375.jpg');
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+}
+.cartRow{
+   height: 70px;
+   line-height: 70px;
+   text-align: center;
+}
+.table thead th {
+   border: none;
+}
+td.productCross {
+   width: 5%;
+    font-size: 18px;
+}
+td.productImg {
+   width: 100px;
+   height: 50px;
+}
+td.subTotal {
+   width: 15%;
+    color: #fcc725;
+}
+td.productQuantity {
+   width: 15%;
+}
+td.productPrice {
+   width: 15%;
+}
+td.ProductName {
+   width: 40%;
+}
+.coupon{
+   width: 100%;
+}
+.formCart{
+   float: left;
+}
+.updateCart{
+   float: right;
+}
+.LastSubTotal{
+   width: 30%;
+}
+h2.cartTotals {
+   margin-bottom: 30px;
+}
+.total td{
+   color: #fcc725;
+}
+.cartTotal .table td, .table th {
+   /* border-top: 1px solid #dee2e6; */
+   border: none;
+}
+.proced {
+   background: lightgray;
+   padding: 20px 50px;
+}
+
+/* ==================== End Cart Page  styling====================*/
+
+/* ==================== Start Checkout Page  styling====================*/
+
+/* ==================== End Checkout Page  styling====================*/
+.checkoutHeadImg{
+   background: url('../images/room-with-bed-and-wooden-floor-1743229.jpg');
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+}
+/* ==================== Start Blog page  styling====================*/
+.blogHeadImg{
+   background: url('../images/two-chairs-with-glass-table-on-living-room-near-window-1571453.jpg');
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+}
+ul.blogPageSl {
+   display: flex;
+   margin: 0;
+   margin-top: 10px;
+}
+
+ul.blogPageSl li {
+   width: 40px;
+   height: 40px;
+   background: #ffc925;
+   color: #fff;
+   font-size: 24px;
+   text-align: center;
+   line-height: 40px;
+   margin-right: 5px;
+   transition: all .5s ease;
+   border: 1px solid transparent;
+}
+
+ul.blogPageSl li:hover {
+   border: 1px solid #ffc925;
+   color: #ffc925;
+   background: transparent;
+}
+/* ==================== End Blog page  styling====================*/
+
+/* ==================== Start Blog-details page styling====================*/
+.blogDetailsHeadImg{
+   background: url('../images/room-with-bed-and-wooden-floor-1743229.jpg');
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+}
+.blog-main-im img {
+    width: 100%;
+    height: 450px;
+    transition: .4s;
+}
+.blog-main-im {
+    position: relative;
+    overflow: hidden;
+}
+.blog-main-im img:hover {
+    transform: scale(1.3);
+    opacity: .8;
+}
+.blog-content {
+    padding: 15px 20px;
+}
+p.post-date {
+   margin-bottom: 20px;
+   font-size: 14px;
+}
+p.post-date i {
+   color: #ffc925;
+   margin-right: 10px;
+   margin-left: 5px;
+}
+h2.blog-tittle {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+p.middlePara {
+    padding-left: 30px;
+    font-size: 18px;
+    position: relative;
+    padding-top: 5px;
+    margin: 30px 0;
+    font-weight: 600;
+}
+p.middlePara:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: calc(100% + 20px);
+    background: #ffc925;
+    left: 0;top: -7px;
+}
+.blog-tags {
+    margin-bottom: 20px;
+    word-spacing: 5px;
+} 
+.blog-tags i{
+   color: #ffc925;
+}
+.share-post {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+.share-post a {
+    margin-left: 10px;
+    background: #333;
+    color: #fff;
+    padding: 0px 5px;
+    text-decoration: none;
+    transition: .3s;
+}
+.share-post a:hover {
+    color: #ffffff;
+    background: #ffc925;
+    text-decoration: underline;
+}
+.comment-area h3 {
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+.comment-item img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    border-radius: 50%;
+}
+.comment-content {
+    margin-left: 115px;
+}
+.comment-item {
+    margin-bottom: 25px;
+}
+.comment-item.comment-left {
+    margin-left: 100px;
+}
+.comment-content p {
+    margin-bottom: 5px;
+}
+p.comment-date {
+    font-size: 14px;
+}
+p.comment-date a {
+    margin-left: 10px;
+}
+.comment-content h5 {
+    font-weight: 600;
+    padding-top: 5px;
+}
+.comment-reply {
+    margin-top: 30px;
+}
+.comment-reply h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.reply-form input {
+    margin-bottom: 10px;
+}
+input.reply-btn {
+    margin-top: 20px;
+    background: #ffc925;
+    padding: 5px 20px;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+input.reply-btn:hover {
+    border: 1px solid #ffc925;
+    color: #ffc925;
+    background: transparent;
+    border-radius: 5px;
+}
+.comment-reply input {
+    margin-bottom: 10px;
+}
+
+.search{
+   background: #f0f0f0;
+   padding: 20px;
+}
+.categories{
+   margin-top: 30px;
+}
+.categories h4{
+   text-transform: uppercase;
+   font-weight: 700;
+}
+.categories ul{
+   list-style: none;
+}
+.categories ul li{
+   font-weight: 600;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   border-bottom: 1px solid #8080809d;
+}
+.categories ul li span{
+   float: right;
+   background: #ffc925;
+   border-radius: 4px;
+   padding: 0px 5px;
+   color: #fff;
+}
+ .latest-post{
+    margin-top: 30px;
+ }
+ .latest-post h4{
+    text-transform: uppercase;
+    font-weight: 700;
+ }
+ .latest-post img{
+    width: 70px;
+    height: 70px;
+    float: left;
+ }
+.latest-content{
+   margin-left: 85px;
+}
+.latest-post ul{
+   margin-top: 30px;
+   list-style: none;
+}
+.latest-post ul li{
+   margin-bottom: 10px;
+   display: inline-block;
+}
+.latest-content h5{
+   font-size: 16px;
+   font-weight: 600;
+}
+.latest-content p{
+   font-size: 14px;
+}
+.latest-content p i{
+   margin-right: 5px;
+}
+.tag-list h5{
+   font-weight: 700;
+}
+.tag-list ul{
+   list-style: none;
+}
+.tag-list ul li{
+   display: inline-block;
+   background: #ffc925;
+   border: 1px solid transparent;
+   padding: 3px 7px;
+   margin-bottom: 5px;
+   color: #fff;
+   transition: .4s;
+}
+.tag-list ul li:hover{
+   border: 1px solid #ffc925;
+   background: transparent;
+   color: #ffc925;
+}
+/* ==================== End Blog-details page styling====================*/
+
+/* ==================== Start Contact Page  styling====================*/
+.contactHeadImg{
+   background: url('../images/brown-wooden-sofa-set-with-lighted-table-lamp-189333.jpg');
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+}
+#contact{
+   margin-top: 100px;
+}
+.contact-item {
+   margin-bottom: 30px;
+   background: #333;
+   color: #fff;
+   padding: 20px;
+   position: relative;
+}
+.contactIcon i {
+   position: absolute;
+   right: 20px;
+   bottom: 30px;
+   font-size: 100px !important;
+   opacity: 0.5;
+}
+.contact-item:hover  i{
+   color: #fff !important;
+}
+.contact-item i{
+   font-size: 40px;
+   border-radius: 50%;
+   color:#ffc925;
+   transition: all .4s  ease;
+}
+.contact-item  h4{
+   margin: 15px 0px;
+   transition: all .4s  ease;
+}
+.contact-item:hover h4{
+   color: #ffc925;
+}
+.contact-item p{
+   color: #808080;
+   font-size: 18px;
+   margin-bottom: 5px;
+}
+.contact-bottom{
+   margin-top: 50px;
+   margin-bottom: 70px;
+}
+.contact-bottom h2 {
+   font-size: 28px;
+   margin-bottom: 20px;
+   display: inline-block;
+   position: relative;
+}
+.contact-bottom h2:before {
+   content: '';
+   position: absolute;
+   right: -40px;
+   bottom: 4px;
+   background: #ffc925;
+   height: 3px;
+   width: 40px;
+}
+.contact-form{
+   background: #eee;
+   padding-top: 20px;
+   margin-top: 30px;
+   margin-bottom: 50px;
+}
+
+.contact-form input,
+.contact-form textarea{
+   width: 90%;
+   padding: 10px 20px;
+   margin-top: 10px;
+   margin-left: 5%;
+   margin-bottom: 10px;
+   border: 1px solid rgba(0,0,0,.3);
+}
+.contact-form input[type=submit]{
+   width: 150px;
+   background: #ffc925;
+   color: #fff;
+   font-weight: 500;
+   border: 1px solid transparent;
+   margin-top: 20px;
+   border-radius: 5px;
+   transition: .4s;
+   margin-bottom: 30px;
+}
+.contact-form input[type=submit]:hover{
+   border: 1px solid #ffc925 !important;
+   color: #ffc925;
+   background: transparent;
+}
+iframe{
+   margin-top: 30px;
+   width: 100%;
+  border: 0;
+
+}
+/* ==================== End Contact Page  styling====================*/
+
+
+
+/* ==================== Start Inspiration area  styling====================*/
+
+/* ==================== End Inspiration Area  styling====================*/
